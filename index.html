@@ -4,7 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>farofa - loja colaborativa</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #ff72b6;
+        }
+        section {
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .galeria img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            function revealSections() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < window.innerHeight * 0.9) {
+                        section.classList.add("visible");
+                    }
+                });
+            }
+            revealSections();
+            window.addEventListener("scroll", revealSections);
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -44,6 +126,20 @@
     <section id="lancamento">
         <h2>lançamento</h2>
         <p>estamos chegando! a farofa abre oficialmente em 01/07/2025. assine antes do lançamento e ganhe 1 mês extra grátis.</p>
+    </section>
+    
+    <section id="galeria">
+        <h2>nossa galeria</h2>
+        <div class="galeria">
+            <img src="1.png" alt="Imagem 1">
+            <img src="2.png" alt="Imagem 2">
+            <img src="3.png" alt="Imagem 3">
+            <img src="4.png" alt="Imagem 4">
+            <img src="5.png" alt="Imagem 5">
+            <img src="6.png" alt="Imagem 6">
+            <img src="7.png" alt="Imagem 7">
+            <img src="8.png" alt="Imagem 8">
+        </div>
     </section>
     
     <section id="contato">
