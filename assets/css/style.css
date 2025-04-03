@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:wght@400;700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #FFF8E1;
-    color: #4D331F;
+    background-color: #FFFFFF;
+    color: #06443b;
 }
 
 header {
-    background-color: #F4A100;
+    background-color: #FF72B6;
     padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    font-family: 'Calistoga', cursive;
     font-weight: 700;
     color: #FFFFFF;
 }
@@ -34,12 +35,13 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: #4D331F;
+    color: #06443b;
     transition: color 0.3s;
+    font-family: 'Montserrat', bold;
 }
 
 nav ul li a:hover {
-    color: #FFFFFF;
+    color: #004FD6;
 }
 
 section {
@@ -49,14 +51,30 @@ section {
 
 #inicio {
     background: url('../imagens/banner.jpg') no-repeat center center/cover;
-    color: #4D331F;
+    color: #06443b;
     font-size: 24px;
     font-weight: 700;
+    font-family: 'Calistoga', cursive;
+}
+
+h1, h2, h3 {
+    font-family: 'Calistoga', cursive;
+    color: #FF72B6;
+}
+
+h4, h5, h6 {
+    font-family: 'Montserrat', bold;
+    color: #004FD6;
+}
+
+p {
+    font-family: 'Montserrat', regular;
+    color: #06443b;
 }
 
 footer {
-    background-color: #4D331F;
-    color: #FFF8E1;
+    background-color: #FFEE51;
+    color: #06443b;
     padding: 20px;
     position: relative;
     bottom: 0;
