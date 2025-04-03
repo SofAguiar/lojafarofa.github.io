@@ -1,65 +1,60 @@
----
-layout: default
-title: loja farofa
----
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Farofa - Em Breve</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("nav a").on("click", function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800);
-                }
-            });
-        });
-    </script>
+    <title>farofa - loja colaborativa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Loja Farofa</h1>
+        <h1>farofa</h1>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">sobre a farofa</a></li>
+                <li><a href="#funciona">como funciona?</a></li>
+                <li><a href="#planos">planos</a></li>
+                <li><a href="#participe">como participar</a></li>
+                <li><a href="#lancamento">lançamento</a></li>
+                <li><a href="#contato">fale com a gente</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="inicio">
-        <h2>Bem-vindo à Farofa</h2>
-        <p>Em breve, a melhor loja para apoiar artistas independentes!</p>
-    </section>
-
+    
     <section id="sobre">
-        <h2>Sobre a Farofa</h2>
-        <p>A Farofa é uma plataforma criada para valorizar o trabalho de artistas independentes...</p>
+        <h2>sobre a farofa</h2>
+        <p>a farofa é uma loja colaborativa online feita para artistas. nossa missão é valorizar a arte independente, dando espaço para diferentes vozes e estilos.</p>
     </section>
-
-    <section id="produtos">
-        <h2>Produtos e Artistas</h2>
-        <p>Em breve, veja as criações exclusivas dos nossos parceiros!</p>
+    
+    <section id="funciona">
+        <h2>como funciona?</h2>
+        <p>você cria, a farofa vende! os artistas pagam uma assinatura fixa e enviam seus produtos para nosso centro de distribuição. daqui, a gente cuida de tudo: divulgação, venda e envio.</p>
     </section>
-
+    
+    <section id="planos">
+        <h2>planos de assinatura</h2>
+        <p>escolha o que cabe no seu bolso! temos planos mensal, trimestral e anual, todos com benefícios especiais para nossos artistas.</p>
+    </section>
+    
+    <section id="participe">
+        <h2>como participar</h2>
+        <p>quer vender com a gente? seus produtos precisam ser autorais, acessíveis e respeitar os direitos humanos. nosso processo de adesão é simples e inclui uma análise de viabilidade.</p>
+    </section>
+    
+    <section id="lancamento">
+        <h2>lançamento</h2>
+        <p>estamos chegando! a farofa abre oficialmente em 01/07/2025. assine antes do lançamento e ganhe 1 mês extra grátis.</p>
+    </section>
+    
     <section id="contato">
-        <h2>Contato</h2>
-        <p>Siga-nos no Instagram e fique por dentro das novidades.</p>
-        <p><a href="https://instagram.com/lojafarofa" target="_blank">@lojafarofa</a></p>
+        <h2>fale com a gente</h2>
+        <p>quer tirar dúvidas ou bater um papo? chama a gente:</p>
+        <p>email: <a href="mailto:lojafarofa@gmail.com">lojafarofa@gmail.com</a></p>
+        <p>instagram: <a href="https://www.instagram.com/loja.farofa" target="_blank">@loja.farofa</a></p>
     </section>
-
+    
     <footer>
-        <p>&copy; 2025 Loja Farofa - Todos os direitos reservados.</p>
+        <p>&copy; 2025 farofa. todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
