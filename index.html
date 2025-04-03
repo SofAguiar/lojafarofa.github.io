@@ -14,6 +14,7 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
+            text-transform: lowercase;
         }
         header {
             display: flex;
@@ -130,34 +131,6 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section");
-            const header = document.querySelector("header");
-            let lastScrollY = window.scrollY;
-            function revealSections() {
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    if (sectionTop < window.innerHeight * 0.9) {
-                        section.classList.add("visible");
-                    }
-                });
-            }
-            function toggleHeader() {
-                if (window.scrollY > lastScrollY) {
-                    header.classList.add("hidden");
-                } else {
-                    header.classList.remove("hidden");
-                }
-                lastScrollY = window.scrollY;
-            }
-            revealSections();
-            window.addEventListener("scroll", () => {
-                revealSections();
-                toggleHeader();
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -167,44 +140,51 @@
                 <li><a href="#sobre">sobre a farofa</a></li>
                 <li><a href="#funciona">como funciona?</a></li>
                 <li><a href="#planos">planos</a></li>
+                <li><a href="#galeria">galeria</a></li>
                 <li><a href="#participe">como participar</a></li>
                 <li><a href="#lancamento">lançamento</a></li>
                 <li><a href="#contato">fale com a gente</a></li>
             </ul>
         </nav>
     </header>
-    <section id="planos">
+    <section id="sobre">
         <div class="texto">
-            <h2>planos</h2>
-            <p>escolha o plano que melhor se encaixa no seu perfil e comece a vender suas criações na farofa!</p>
+            <h2>sobre a farofa</h2>
+            <p>a farofa é uma loja colaborativa que conecta criadores independentes a consumidores que valorizam produtos autorais e exclusivos.</p>
         </div>
-        <div class="imagem"><img src="assets/imagens/3.png" alt="Imagem 3"></div>
+        <div class="imagem"><img src="assets/imagens/1.png" alt="imagem 1"></div>
+    </section>
+    <section id="funciona">
+        <div class="texto">
+            <h2>como funciona?</h2>
+            <p>os criadores podem expor seus produtos na plataforma, definir preços e alcançar novos clientes de forma fácil e acessível.</p>
+        </div>
+        <div class="imagem"><img src="assets/imagens/2.png" alt="imagem 2"></div>
+    </section>
+    <section id="planos">
+        <h2>planos</h2>
+        <p>informações sobre os planos de participação na plataforma.</p>
     </section>
     <section id="participe">
-        <div class="texto">
-            <h2>como participar?</h2>
-            <p>é fácil! basta preencher nosso formulário e nossa equipe entrará em contato com você.</p>
-        </div>
-        <div class="imagem"><img src="assets/imagens/4.png" alt="Imagem 4"></div>
+        <h2>como participar</h2>
+        <p>detalhes sobre como se tornar um criador na farofa.</p>
     </section>
     <section id="lancamento">
-        <div class="texto">
-            <h2>lançamento</h2>
-            <p>estamos chegando! em breve você poderá expor e vender seus produtos na farofa.</p>
-        </div>
-        <div class="imagem"><img src="assets/imagens/5.png" alt="Imagem 5"></div>
+        <h2>lançamento</h2>
+        <p>data e informações sobre o lançamento da plataforma.</p>
     </section>
     <section id="contato">
-        <div class="texto">
-            <h2>fale com a gente</h2>
-            <p>tem dúvidas? sugestões? entre em contato pelo nosso email: contato@farofa.com</p>
-        </div>
-        <div class="imagem"><img src="assets/imagens/6.png" alt="Imagem 6"></div>
+        <h2>fale com a gente</h2>
+        <p>informações de contato e suporte.</p>
     </section>
-    <div class="galeria">
-        <img src="assets/imagens/7.png" alt="Imagem 7">
-        <img src="assets/imagens/8.png" alt="Imagem 8">
-    </div>
+    <section id="galeria">
+        <h2>galeria</h2>
+        <div class="galeria">
+            <img src="assets/imagens/3.png" alt="imagem 3">
+            <img src="assets/imagens/4.png" alt="imagem 4">
+            <img src="assets/imagens/5.png" alt="imagem 5">
+        </div>
+    </section>
     <footer>
         <p>&copy; 2025 farofa. todos os direitos reservados.</p>
     </footer>
