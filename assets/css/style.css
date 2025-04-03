@@ -20,6 +20,7 @@ header {
     font-family: 'Calistoga', cursive;
     font-weight: 700;
     color: #FFFFFF;
+    text-align: center;
 }
 
 nav ul {
@@ -35,7 +36,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: #06443b;
+    color: #FFFFFF;
     transition: color 0.3s;
     font-family: 'Montserrat', bold;
 }
