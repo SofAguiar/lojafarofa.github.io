@@ -1,0 +1,8 @@
+title: Loja Farofa
+email: contato@lojafarofa.com.br
+description: "Página oficial da Loja Farofa - Em breve!"
+baseurl: ""
+url: "https://lojafarofa.github.io"
+theme: minima
+plugins:
+  - jekyll-feed

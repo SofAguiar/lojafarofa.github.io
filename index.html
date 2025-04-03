@@ -1,26 +1,65 @@
+---
+layout: default
+title: loja farofa
+---
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Farofa</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f8f8f8;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-    </style>
+    <title>Loja Farofa - Em Breve</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("nav a").on("click", function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800);
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>Bem-vindo à Loja Farofa!</h1>
-    <p>Em breve, nossa loja estará no ar. Aguarde novidades!</p>
+    <header>
+        <h1>Loja Farofa</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bem-vindo à Farofa</h2>
+        <p>Em breve, a melhor loja para apoiar artistas independentes!</p>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre a Farofa</h2>
+        <p>A Farofa é uma plataforma criada para valorizar o trabalho de artistas independentes...</p>
+    </section>
+
+    <section id="produtos">
+        <h2>Produtos e Artistas</h2>
+        <p>Em breve, veja as criações exclusivas dos nossos parceiros!</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Siga-nos no Instagram e fique por dentro das novidades.</p>
+        <p><a href="https://instagram.com/lojafarofa" target="_blank">@lojafarofa</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Loja Farofa - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
