@@ -4,76 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>farofa - loja colaborativa</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            font-size: 16px;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-        }
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 5px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            padding: 5px 10px;
-            transition: color 0.3s ease-in-out;
-        }
-        nav ul li a:hover {
-            color: #ff72b6;
-        }
-        section {
-            padding: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            padding: 20px;
-        }
-        .galeria img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .galeria img:hover {
-            transform: scale(1.05);
-        }
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Animação ao rolar a página
             const sections = document.querySelectorAll("section");
             function revealSections() {
                 sections.forEach(section => {
@@ -85,6 +19,11 @@
             }
             revealSections();
             window.addEventListener("scroll", revealSections);
+
+            // Carregar imagens suavemente
+            document.querySelectorAll(".galeria img").forEach(img => {
+                img.onload = () => img.classList.add("loaded");
+            });
         });
     </script>
 </head>
