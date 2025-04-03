@@ -5,9 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>farofa - loja colaborativa</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #ff72b6;
+        }
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .texto {
+            width: 50%;
+        }
+        .imagem {
+            width: 40%;
+        }
+        .imagem img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .galeria img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #FFEE51;
+            color: #06443b;
+            padding: 20px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .texto, .imagem {
+                width: 100%;
+            }
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Animação ao rolar a página
             const sections = document.querySelectorAll("section");
             function revealSections() {
                 sections.forEach(section => {
@@ -19,11 +113,6 @@
             }
             revealSections();
             window.addEventListener("scroll", revealSections);
-
-            // Carregar imagens suavemente
-            document.querySelectorAll(".galeria img").forEach(img => {
-                img.onload = () => img.classList.add("loaded");
-            });
         });
     </script>
 </head>
@@ -43,28 +132,19 @@
     </header>
     
     <section id="sobre">
-        <h2>sobre a farofa</h2>
-        <p>a farofa é uma loja colaborativa online feita para artistas. nossa missão é valorizar a arte independente, dando espaço para diferentes vozes e estilos.</p>
+        <div class="texto">
+            <h2>sobre a farofa</h2>
+            <p>a farofa é uma loja colaborativa online feita para artistas.<br> nossa missão é valorizar a arte independente, dando espaço para diferentes vozes e estilos.</p>
+        </div>
+        <div class="imagem"><img src="1.png" alt="Imagem 1"></div>
     </section>
     
     <section id="funciona">
-        <h2>como funciona?</h2>
-        <p>você cria, a farofa vende! os artistas pagam uma assinatura fixa e enviam seus produtos para nosso centro de distribuição. daqui, a gente cuida de tudo: divulgação, venda e envio.</p>
-    </section>
-    
-    <section id="planos">
-        <h2>planos de assinatura</h2>
-        <p>escolha o que cabe no seu bolso! temos planos mensal, trimestral e anual, todos com benefícios especiais para nossos artistas.</p>
-    </section>
-    
-    <section id="participe">
-        <h2>como participar</h2>
-        <p>quer vender com a gente? seus produtos precisam ser autorais, acessíveis e respeitar os direitos humanos. nosso processo de adesão é simples e inclui uma análise de viabilidade.</p>
-    </section>
-    
-    <section id="lancamento">
-        <h2>lançamento</h2>
-        <p>estamos chegando! a farofa abre oficialmente em 01/07/2025. assine antes do lançamento e ganhe 1 mês extra grátis.</p>
+        <div class="texto">
+            <h2>como funciona?</h2>
+            <p>você cria, a farofa vende!<br> os artistas pagam uma assinatura fixa e enviam seus produtos para nosso centro de distribuição.<br> daqui, a gente cuida de tudo: divulgação, venda e envio.</p>
+        </div>
+        <div class="imagem"><img src="2.png" alt="Imagem 2"></div>
     </section>
     
     <section id="galeria">
@@ -83,7 +163,7 @@
     
     <section id="contato">
         <h2>fale com a gente</h2>
-        <p>quer tirar dúvidas ou bater um papo? chama a gente:</p>
+        <p>quer tirar dúvidas ou bater um papo?<br> chama a gente:</p>
         <p>email: <a href="mailto:lojafarofa@gmail.com">lojafarofa@gmail.com</a></p>
         <p>instagram: <a href="https://www.instagram.com/loja.farofa" target="_blank">@loja.farofa</a></p>
     </section>
