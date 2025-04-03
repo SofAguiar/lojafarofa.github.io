@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>farofa - loja colaborativa</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/imagens/favicon.ico">
     <style>
         body {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.8;
             scroll-behavior: smooth;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
         header {
             display: flex;
@@ -56,7 +59,9 @@
             transform: translateY(0);
         }
         .texto {
-            width: 50%;
+            width: 100%;
+            max-width: 600px;
+            text-align: justify;
         }
         .imagem {
             width: 40%;
@@ -90,7 +95,7 @@
         }
         @media (max-width: 768px) {
             body {
-                font-size: 14px;
+                font-size: 16px;
             }
             nav ul {
                 flex-direction: column;
@@ -145,32 +150,11 @@
     </section>
     
     <section id="funciona">
-        <div class="imagem"><img src="assets/imagens/2.png" alt="Imagem 2"></div>
         <div class="texto">
             <h2>como funciona?</h2>
             <p>você cria, a farofa vende!<br> os artistas pagam uma assinatura fixa e enviam seus produtos para nosso centro de distribuição.<br> daqui, a gente cuida de tudo: divulgação, venda e envio.</p>
         </div>
-    </section>
-    
-    <section id="galeria">
-        <h2>nossa galeria</h2>
-        <div class="galeria">
-            <img src="assets/imagens/1.png" alt="Imagem 1">
-            <img src="assets/imagens/2.png" alt="Imagem 2">
-            <img src="assets/imagens/3.png" alt="Imagem 3">
-            <img src="assets/imagens/4.png" alt="Imagem 4">
-            <img src="assets/imagens/5.png" alt="Imagem 5">
-            <img src="assets/imagens/6.png" alt="Imagem 6">
-            <img src="assets/imagens/7.png" alt="Imagem 7">
-            <img src="assets/imagens/8.png" alt="Imagem 8">
-        </div>
-    </section>
-    
-    <section id="contato">
-        <h2>fale com a gente</h2>
-        <p>quer tirar dúvidas ou bater um papo?<br> chama a gente:</p>
-        <p>email: <a href="mailto:lojafarofa@gmail.com">lojafarofa@gmail.com</a></p>
-        <p>instagram: <a href="https://www.instagram.com/loja.farofa" target="_blank">@loja.farofa</a></p>
+        <div class="imagem"><img src="assets/imagens/2.png" alt="Imagem 2"></div>
     </section>
     
     <footer>
