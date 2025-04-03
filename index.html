@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>farofa - loja colaborativa</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="asstes/imagens/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/imagens/favicon.ico">
     <style>
         body {
             font-size: 20px;
@@ -21,9 +21,20 @@
             align-items: center;
             text-align: center;
             padding: 10px;
+            background: #FF72B6;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: top 0.3s;
+            z-index: 1000;
+        }
+        header.hidden {
+            top: -100px;
         }
         header h1 {
-            font-size: 4em;
+            font-size: 3em;
             margin: 0;
         }
         nav ul {
@@ -39,7 +50,7 @@
         nav ul li a {
             text-decoration: none;
             padding: 5px 10px;
-            font-size: 1.2em;
+            font-size: 1em;
             transition: color 0.3s ease-in-out;
         }
         nav ul li a:hover {
@@ -59,16 +70,16 @@
             transform: translateY(0);
         }
         .texto {
-            width: 55%;
+            width: 50%;
             text-align: justify;
-            padding-right: 40px;
+            padding-right: 50px;
         }
         .imagem {
-            width: 45%;
+            width: 50%;
         }
         .imagem img {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             border-radius: 10px;
         }
         .galeria {
@@ -80,7 +91,7 @@
         }
         .galeria img {
             width: calc(33% - 20px);
-            max-width: 300px;
+            max-width: 350px;
             border-radius: 10px;
             transition: transform 0.3s ease-in-out;
         }
@@ -122,6 +133,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const sections = document.querySelectorAll("section");
+            const header = document.querySelector("header");
+            let lastScrollY = window.scrollY;
             function revealSections() {
                 sections.forEach(section => {
                     const sectionTop = section.getBoundingClientRect().top;
@@ -130,8 +143,19 @@
                     }
                 });
             }
+            function toggleHeader() {
+                if (window.scrollY > lastScrollY) {
+                    header.classList.add("hidden");
+                } else {
+                    header.classList.remove("hidden");
+                }
+                lastScrollY = window.scrollY;
+            }
             revealSections();
-            window.addEventListener("scroll", revealSections);
+            window.addEventListener("scroll", () => {
+                revealSections();
+                toggleHeader();
+            });
         });
     </script>
 </head>
@@ -149,32 +173,38 @@
             </ul>
         </nav>
     </header>
-    
-    <section id="sobre">
+    <section id="planos">
         <div class="texto">
-            <h2>sobre a farofa</h2>
-            <p>a farofa é uma loja colaborativa online feita para artistas.<br> nossa missão é valorizar a arte independente, dando espaço para diferentes vozes e estilos.</p>
+            <h2>planos</h2>
+            <p>escolha o plano que melhor se encaixa no seu perfil e comece a vender suas criações na farofa!</p>
         </div>
-        <div class="imagem"><img src="assets/imagens/1.png" alt="Imagem 1"></div>
+        <div class="imagem"><img src="assets/imagens/3.png" alt="Imagem 3"></div>
     </section>
-    
-    <section id="funciona">
+    <section id="participe">
         <div class="texto">
-            <h2>como funciona?</h2>
-            <p>você cria, a farofa vende!<br> os artistas pagam uma assinatura fixa e enviam seus produtos para nosso centro de distribuição.<br> daqui, a gente cuida de tudo: divulgação, venda e envio.</p>
+            <h2>como participar?</h2>
+            <p>é fácil! basta preencher nosso formulário e nossa equipe entrará em contato com você.</p>
         </div>
-        <div class="imagem"><img src="assets/imagens/2.png" alt="Imagem 2"></div>
+        <div class="imagem"><img src="assets/imagens/4.png" alt="Imagem 4"></div>
     </section>
-    
+    <section id="lancamento">
+        <div class="texto">
+            <h2>lançamento</h2>
+            <p>estamos chegando! em breve você poderá expor e vender seus produtos na farofa.</p>
+        </div>
+        <div class="imagem"><img src="assets/imagens/5.png" alt="Imagem 5"></div>
+    </section>
+    <section id="contato">
+        <div class="texto">
+            <h2>fale com a gente</h2>
+            <p>tem dúvidas? sugestões? entre em contato pelo nosso email: contato@farofa.com</p>
+        </div>
+        <div class="imagem"><img src="assets/imagens/6.png" alt="Imagem 6"></div>
+    </section>
     <div class="galeria">
-        <img src="assets/imagens/3.png" alt="Imagem 3">
-        <img src="assets/imagens/4.png" alt="Imagem 4">
-        <img src="assets/imagens/5.png" alt="Imagem 5">
-        <img src="assets/imagens/6.png" alt="Imagem 6">
         <img src="assets/imagens/7.png" alt="Imagem 7">
         <img src="assets/imagens/8.png" alt="Imagem 8">
     </div>
-    
     <footer>
         <p>&copy; 2025 farofa. todos os direitos reservados.</p>
     </footer>
