@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:wght@400;700&display=swap');
 
+/* Base Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -9,7 +10,7 @@ body {
     color: #06443b;
 }
 
-/* Header corrigido */
+/* Fixed Header */
 header {
     background-color: #FF72B6;
     padding: 20px;
@@ -19,9 +20,8 @@ header {
     left: 0;
     z-index: 1000;
     font-family: 'Calistoga', cursive;
-    font-weight: 700;
-    color: #FFFFFF; /* Texto branco para contraste */
-    text-align: center;
+    font-weight: 400;
+    color: #FFFFFF;
 }
 
 nav ul {
@@ -41,15 +41,15 @@ nav ul li a {
     font-weight: bold;
     color: #FFFFFF;
     transition: color 0.3s;
-    font-family: 'Montserrat', bold;
 }
 
 nav ul li a:hover {
     color: #004FD6;
 }
 
+/* Sections */
 section {
-    padding: 100px 20px;
+    padding: 150px 20px 100px;
     min-height: 100vh;
     opacity: 0;
     transform: translateY(20px);
@@ -61,7 +61,7 @@ section.visible {
     transform: translateY(0);
 }
 
-/* Galeria dinâmica */
+/* Gallery Styles */
 .galeria {
     display: flex;
     overflow-x: auto;
@@ -73,32 +73,72 @@ section.visible {
 
 .galeria img {
     flex: 0 0 auto;
-    width: 200px; /* Tamanho reduzido para melhor adaptação */
+    width: 200px;
     max-width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
+    transition: transform 0.3s ease-in-out;
     scroll-snap-align: center;
-}
-
-.galeria img.loaded {
-    opacity: 1;
 }
 
 .galeria img:hover {
     transform: scale(1.05);
 }
 
-/* Responsividade */
+/* Layout Enhancements */
+.content-block {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-column {
+    margin-bottom: 40px;
+}
+
+.image-column {
+    display: none;
+}
+
+.text-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
     }
+    
     section {
-        padding: 50px 20px; /* Reduzido para melhor adaptação */
+        padding: 100px 20px 50px;
     }
+    
     nav ul {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .content-block {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .text-column {
+        flex: 1;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    
+    .image-column {
+        display: block;
+        flex: 0 0 45%;
+    }
+    
+    .galeria img {
+        width: 300px;
     }
 }

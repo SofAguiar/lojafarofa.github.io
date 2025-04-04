@@ -1,192 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>farofa - loja colaborativa</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/imagens/favicon.ico">
-    <style>
-        body {
-            font-size: 20px;
-            line-height: 1.8;
-            scroll-behavior: smooth;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-transform: lowercase;
-        }
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-            background: #FF72B6;
-            color: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            transition: top 0.3s;
-            z-index: 1000;
-        }
-        header.hidden {
-            top: -100px;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 5px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            padding: 5px 10px;
-            font-size: 1em;
-            transition: color 0.3s ease-in-out;
-        }
-        nav ul li a:hover {
-            color: #ff72b6;
-        }
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .texto {
-            width: 50%;
-            text-align: justify;
-            padding-right: 50px;
-        }
-        .imagem {
-            width: 50%;
-        }
-        .imagem img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        .galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .galeria img {
-            width: calc(33% - 20px);
-            max-width: 350px;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .galeria img:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #FFEE51;
-            color: #06443b;
-            padding: 30px;
-            text-align: center;
-            font-size: 1.2em;
-        }
-        @media (max-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .texto {
-                width: 100%;
-                padding-right: 0;
-            }
-            .imagem {
-                width: 100%;
-                margin-top: 20px;
-            }
-            .galeria img {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>farofa</h1>
         <nav>
             <ul>
-                <li><a href="#sobre">sobre a farofa</a></li>
-                <li><a href="#funciona">como funciona?</a></li>
-                <li><a href="#planos">planos</a></li>
-                <li><a href="#galeria">galeria</a></li>
-                <li><a href="#participe">como participar</a></li>
-                <li><a href="#lancamento">lançamento</a></li>
-                <li><a href="#contato">fale com a gente</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </nav>
     </header>
-    <section id="sobre">
-        <div class="texto">
-            <h2>sobre a farofa</h2>
-            <p>a farofa é uma loja colaborativa que conecta criadores independentes a consumidores que valorizam produtos autorais e exclusivos.</p>
-        </div>
-        <div class="imagem"><img src="assets/imagens/1.png" alt="imagem 1"></div>
-    </section>
-    <section id="funciona">
-        <div class="texto">
-            <h2>como funciona?</h2>
-            <p>os criadores podem expor seus produtos na plataforma, definir preços e alcançar novos clientes de forma fácil e acessível.</p>
-        </div>
-        <div class="imagem"><img src="assets/imagens/2.png" alt="imagem 2"></div>
-    </section>
-    <section id="planos">
-        <h2>planos</h2>
-        <p>informações sobre os planos de participação na plataforma.</p>
-    </section>
-    <section id="participe">
-        <h2>como participar</h2>
-        <p>detalhes sobre como se tornar um criador na farofa.</p>
-    </section>
-    <section id="lancamento">
-        <h2>lançamento</h2>
-        <p>data e informações sobre o lançamento da plataforma.</p>
-    </section>
-    <section id="contato">
-        <h2>fale com a gente</h2>
-        <p>informações de contato e suporte.</p>
-    </section>
-    <section id="galeria">
-        <h2>galeria</h2>
-        <div class="galeria">
-            <img src="assets/imagens/3.png" alt="imagem 3">
-            <img src="assets/imagens/4.png" alt="imagem 4">
-            <img src="assets/imagens/5.png" alt="imagem 5">
+
+    <!-- Home Section -->
+    <section id="home" class="visible">
+        <div class="content-block">
+            <div class="text-container">
+                <h1>Welcome to My Site</h1>
+                <div class="intro-text">
+                    <p>Insert your main introductory text here</p>
+                </div>
+            </div>
         </div>
     </section>
-    <footer>
-        <p>&copy; 2025 farofa. todos os direitos reservados.</p>
-    </footer>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="content-block">
+            <div class="text-column">
+                <h2>About Us</h2>
+                <div class="body-text">
+                    <p>Insert your about content here</p>
+                    <p>More detailed information text</p>
+                </div>
+            </div>
+            <div class="image-column">
+                <!-- Insert about section image here -->
+                <img src="placeholder-about.jpg" alt="About section visual" class="loaded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="content-block">
+            <h2>Gallery</h2>
+            <div class="galeria">
+                <img src="image1.jpg" alt="Gallery item 1" class="loaded">
+                <img src="image2.jpg" alt="Gallery item 2" class="loaded">
+                <img src="image3.jpg" alt="Gallery item 3" class="loaded">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple scroll reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
