@@ -1,191 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>farofa - loja colaborativa</title>
-    <link rel="icon" type="image/x-icon" href="assets/imagens/favicon.ico">
-    <style>
-        body {
-            font-size: 20px;
-            line-height: 1.8;
-            scroll-behavior: smooth;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-transform: lowercase;
-        }
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-            background: #FF72B6;
-            color: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            transition: top 0.3s;
-            z-index: 1000;
-        }
-        header.hidden {
-            top: -100px;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 5px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            padding: 5px 10px;
-            font-size: 1em;
-            transition: color 0.3s ease-in-out;
-        }
-        nav ul li a:hover {
-            color: #ff72b6;
-        }
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .texto {
-            width: 50%;
-            text-align: justify;
-            padding-right: 50px;
-        }
-        .imagem {
-            width: 50%;
-        }
-        .imagem img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        .galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .galeria img {
-            width: calc(33% - 20px);
-            max-width: 100px;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .galeria img:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #FFEE51;
-            color: #06443b;
-            padding: 30px;
-            text-align: center;
-            font-size: 1.2em;
-        }
-        @media (max-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .texto {
-                width: 100%;
-                padding-right: 0;
-            }
-            .imagem {
-                width: 100%;
-                margin-top: 20px;
-            }
-            .galeria img {
-                width: 100%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>a farofa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>farofa</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">sobre a farofa</a></li>
-                <li><a href="#funciona">como funciona?</a></li>
-                <li><a href="#planos">planos</a></li>
-                <li><a href="#galeria">galeria</a></li>
-                <li><a href="#participe">como participar</a></li>
-                <li><a href="#lancamento">lançamento</a></li>
-                <li><a href="#contato">fale com a gente</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>a farofa</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#como-funciona">como funciona</a></li>
+        <li><a href="#como-participar">como participar</a></li>
+        <li><a href="#planos">planos</a></li>
+        <li><a href="#diretrizes">diretrizes</a></li>
+        <li><a href="#contato">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <section id="sobre">
-        <div class="texto">
-            <h2>sobre a farofa</h2>
-            <p>a farofa é uma loja colaborativa que conecta criadores independentes a consumidores que valorizam produtos autorais e exclusivos.</p>
-        </div>
-        <div class="imagem"><img src="assets/imagens/1.png" alt="imagem 1"></div>
+      <h2>sobre</h2>
+      <p>a farofa é uma loja online colaborativa para artistas. acreditamos em transparência, simplicidade e acessibilidade para artistas de todos os tamanhos.</p>
     </section>
-    <section id="funciona">
-        <div class="texto">
-            <h2>como funciona?</h2>
-            <p>os criadores podem expor seus produtos na plataforma, definir preços e alcançar novos clientes de forma fácil e acessível.</p>
-        </div>
-        <div class="imagem"><img src="assets/imagens/2.png" alt="imagem 2"></div>
+
+    <section id="como-funciona">
+      <h2>como funciona</h2>
+      <p>você envia sua arte, envia os produtos e a gente cuida do resto. sem taxa fixa, sem burocracia, sem mistério.</p>
     </section>
+
+    <section id="como-participar">
+      <h2>como participar</h2>
+      <p>abre uma chamada por temporada. envie seu portfólio e proposta de coleção quando estiver aberta.</p>
+    </section>
+
     <section id="planos">
-        <h2>planos</h2>
-        <p>informações sobre os planos de participação na plataforma.</p>
+      <h2>planos</h2>
+      <p>modelo colaborativo, com divisão justa dos lucros e suporte para produção sob demanda.</p>
     </section>
-    <section id="participe">
-        <h2>como participar</h2>
-        <p>detalhes sobre como se tornar um criador na farofa.</p>
+
+    <section id="diretrizes">
+      <h2>diretrizes</h2>
+      <p>valorizamos originalidade, respeito e inclusão. leia as regras antes de enviar sua proposta.</p>
     </section>
-    <section id="lancamento">
-        <h2>lançamento</h2>
-        <p>data e informações sobre o lançamento da plataforma.</p>
-    </section>
+
     <section id="contato">
-        <h2>fale com a gente</h2>
-        <p>informações de contato e suporte.</p>
+      <h2>contato</h2>
+      <p>envie um e-mail para <a href="mailto:contato@lojafarofa.com.br">contato@lojafarofa.com.br</a> ou fale com a gente pelo <a href="#">instagram</a>.</p>
     </section>
-    <section id="galeria">
-        <h2>galeria</h2>
-        <div class="galeria">
-            <img src="assets/imagens/3.png" alt="imagem 3">
-            <img src="assets/imagens/4.png" alt="imagem 4">
-            <img src="assets/imagens/5.png" alt="imagem 5">
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 farofa. todos os direitos reservados.</p>
-    </footer>
+  </main>
+
+  <footer>
+    <p>movido a café e otimismo</p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,59 @@
+/* identidade visual da farofa */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #06443b;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-family: 'Calistoga', cursive;
+    font-size: 3rem;
+    color: #ff72b6;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    text-transform: lowercase;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #004fd6;
+    font-weight: bold;
+    text-transform: lowercase;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 1rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #6AB547;
+    font-family: 'Montserrat', bold;
+    text-transform: lowercase;
+  }
+  
+  footer {
+    background: #06443b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
