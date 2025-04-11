@@ -1,28 +1,36 @@
-/* identidade visual da farofa */
+/* fontes e estilo base */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
     color: #06443b;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* cabeçalho */
+  header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
   }
   
   h1 {
     font-family: 'Calistoga', cursive;
     font-size: 3rem;
     color: #ff72b6;
-    text-align: center;
-    margin: 2rem 0 1rem;
+    margin: 0;
     text-transform: lowercase;
   }
   
+  /* navegação */
   nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
+    margin-top: 1rem;
     gap: 1rem;
-    margin-bottom: 2rem;
   }
   
   nav a {
@@ -30,12 +38,21 @@ body {
     color: #004fd6;
     font-weight: bold;
     text-transform: lowercase;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    transition: background 0.3s ease;
   }
   
+  nav a:hover {
+    background-color: #ffee51;
+    color: #06443b;
+  }
+  
+  /* conteúdo principal */
   main {
     max-width: 800px;
     margin: auto;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
   }
   
   section {
@@ -44,16 +61,103 @@ body {
   
   h2 {
     font-size: 1.8rem;
-    color: #6AB547;
+    color: #ff72b6;
     font-family: 'Montserrat', bold;
     text-transform: lowercase;
+    margin-bottom: 1rem;
   }
   
+  /* listas */
+  section ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+  }
+  
+  section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* links */
+  a {
+    color: #ff72b6;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* botão de email */
+  .botao-email {
+    display: inline-block;
+    background-color: #ff72b6;
+    color: #000022;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .botao-email:hover {
+    background-color: #ffee51;
+    color: #06443b;
+  }
+  
+  /* galeria de produtos */
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .galeria figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria figure:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* rodapé */
   footer {
     background: #06443b;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+  }
+  
+  /* responsivo */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      padding: 0.5rem;
+    }
   }
   
