@@ -7,20 +7,36 @@
   <link rel="stylesheet" href="style.css"> 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="script.js"></script>
+ 
+ 
 </head>
 <body>
   <header>
     <h1>farofa</h1>
     <nav>
       <ul>
+        <li class="hideOnMobile"><a href="#oque-e">o que é?</a></li>
+        <li class="hideOnMobile"><a href="#como-funciona">como funciona</a></li>
+        <li class="hideOnMobile"><a href="#galeria">galeria</a></li>
+        <li class="hideOnMobile"><a href="#como-participar">como participar</a></li>
+        <li class="hideOnMobile"><a href="#planos">planos</a></li>
+        <li class="hideOnMobile"><a href="#diretrizes">diretrizes</a></li>
+        <li class="hideOnMobile"><a href="#contato">contato</a></li>
+        <li class="hideOnPc" onclick=showSideBar()><a href="#"><span class="material-symbols-outlined">menu</span></a></li>
+      </ul> 
+ 
+      <ul  class="sidebar">
         <li><a href="#oque-e">o que é?</a></li>
         <li><a href="#como-funciona">como funciona</a></li>
         <li><a href="#galeria">galeria</a></li>
         <li><a href="#como-participar">como participar</a></li>
         <li><a href="#planos">planos</a></li>
         <li><a href="#diretrizes">diretrizes</a></li>
-        <li><a href="#contato">contato</a></li>
+        <li onclick=hideSideBar()><a href="#"><span class="material-symbols-outlined">close</span></a></li>
       </ul>
+ 
     </nav>
   </header>
 
