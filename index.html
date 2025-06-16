@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>farofa</title>
-  <link rel="stylesheet" href="style.css"> 
+  <title>Farofa | Loja Colaborativa de Arte para Artistas</title>
+  <meta name="description" content="Farofa: A loja colaborativa online para artistas independentes. Crie sua arte e nós cuidamos do estoque, divulgação, venda e envio. Junte-se a nós!" />
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <script src="script.js"></script>
- 
- 
+
+
 </head>
 <body>
   <header>
-    <h1>farofa</h1>
-    <nav>
+    <h1><a href="#top">farofa</a></h1> <nav>
       <ul>
         <li class="hideOnMobile"><a href="#oque-e">o que é?</a></li>
         <li class="hideOnMobile"><a href="#como-funciona">como funciona</a></li>
@@ -24,19 +24,13 @@
         <li class="hideOnMobile"><a href="#planos">planos</a></li>
         <li class="hideOnMobile"><a href="#diretrizes">diretrizes</a></li>
         <li class="hideOnMobile"><a href="#contato">contato</a></li>
-        <li class="hideOnPc" onclick=showSideBar()><a href="#"><span class="material-symbols-outlined">menu</span></a></li>
-      </ul> 
- 
-      <ul  class="sidebar">
-        <li><a href="#oque-e">o que é?</a></li>
-        <li><a href="#como-funciona">como funciona</a></li>
-        <li><a href="#galeria">galeria</a></li>
-        <li><a href="#como-participar">como participar</a></li>
-        <li><a href="#planos">planos</a></li>
-        <li><a href="#diretrizes">diretrizes</a></li>
-        <li onclick=hideSideBar()><a href="#"><span class="material-symbols-outlined">close</span></a></li>
+        <li class="hideOnPc" onclick="showSideBar()"><a href="#"><span class="material-symbols-outlined">menu</span></a></li>
       </ul>
- 
+
+      <ul class="sidebar">
+        <li onclick="hideSideBar()"><a href="#oque-e">o que é?</a></li> <li onclick="hideSideBar()"><a href="#como-funciona">como funciona</a></li> <li onclick="hideSideBar()"><a href="#galeria">galeria</a></li> <li onclick="hideSideBar()"><a href="#como-participar">como participar</a></li> <li onclick="hideSideBar()"><a href="#planos">planos</a></li> <li onclick="hideSideBar()"><a href="#diretrizes">diretrizes</a></li> <li onclick="hideSideBar()"><a href="#contato">contato</a></li> <li onclick="hideSideBar()"><a href="#"><span class="material-symbols-outlined">close</span></a></li>
+      </ul>
+
     </nav>
   </header>
 
@@ -54,50 +48,43 @@
     <section id="galeria">
       <h2>galeria da farofa</h2>
       <div class="galeria">
-        <figure><img src="images/1.jpg" alt="produto 1"></figure>
-        <figure><img src="images/2.jpg" alt="produto 2"></figure>
-        <figure><img src="images/3.jpg" alt="produto 3"></figure>
-        <figure><img src="images/4.jpg" alt="produto 4"></figure>
-        <figure><img src="images/5.jpg" alt="produto 5"></figure>
-        <figure><img src="images/6.jpg" alt="produto 6"></figure>
-        <figure><img src="images/7.jpg" alt="produto 7"></figure>
-        <figure><img src="images/8.jpg" alt="produto 8"></figure>
+        <figure><img src="images/1.jpg" alt="embalagem colorida para envio de artes"></figure>
+        <figure><img src="images/2.jpg" alt="embalagem colorida com cartão de agradecimento"></figure>
+        <figure><img src="images/3.jpg" alt="materiais de embalagem para envio de artes"></figure>
+        <figure><img src="images/4.jpg" alt="cartão de agradecimento por compra de arte"></figure>
+        <figure><img src="images/5.jpg" alt="unboxing de compra de arte"></figure>
+        <figure><img src="images/6.jpg" alt="cartão escrito eu apoio artistas vivos"></figure>
+        <figure><img src="images/7.jpg" alt="cartão de visita da loja farofa"></figure>
+        <figure><img src="images/8.jpg" alt="cartão de visita com cartão de agradecimento por compra"></figure>
       </div>
       <p>veja mais em nosso instagram <a href="https://instagram.com/loja.farofa" target="_blank">@loja.farofa</a></p>
     </section>
 
-    <section>
-      <h2>quanto vou ganhar?</h2>
+    <section id="ganhos"> <h2>quanto vou ganhar?</h2>
       <p>o artista define quanto quer receber por cada produto. aí a farofa adiciona 10% sobre esse valor, que vai cobrir os custos da plataforma online, marketing, embalagem e manuseio.</p>
     </section>
 
-    <section>
-      <h2>e quando vou receber?</h2>
+    <section id="recebimento"> <h2>e quando vou receber?</h2>
       <p>o pagamento do artista se dá no quinto dia útil de cada mês e o valor é referente ao vendido no mês anterior. o objetivo é ser o mais transparente e simples possível.</p>
     </section>
 
-    <section>
-      <h2>como é a divulgação?</h2>
+    <section id="divulgacao"> <h2>como é a divulgação?</h2>
       <p>a equipe farofa tem um social media incrível dedicado a divulgar a loja e seus produtos nas redes sociais da meta. faremos posts e tráfego pago para alcançar cada vez mais clientes.</p>
     </section>
 
-    <section>
-      <h2>quanto posso estocar?</h2>
+    <section id="estoque"> <h2>quanto posso estocar?</h2>
       <p>cada artista parceire tem direito a 100 litros de armazenamento. o estoque é dividido em duas caixas de 33x51x30cm, com a possibilidade de comprar espaço adicional.</p>
     </section>
 
-    <section>
-      <h2>e os envios?</h2>
+    <section id="envios"> <h2>e os envios?</h2>
       <p>o envio é feito pela farofa em até 5 dias úteis após a venda. a embalagem é padrão da loja e prezamos pelo bem-estar do produto assim como pela acessibilidade do frete.</p>
     </section>
 
     <section id="como-participar">
       <h2>como participar?</h2>
-      <p>para ser um artista parceire, basta mandar um email para contato@lojafarofa.com.br e escolher o plano que mais se adeque a sua situação.</p>
-    </section>
+      <p>para ser um artista parceire, basta mandar um email para <a href="mailto:contato@lojafarofa.com.br">contato@lojafarofa.com.br</a> e escolher o plano que mais se adeque a sua situação.</p> </section>
 
-    <section>
-      <h2>formalidades</h2>
+    <section id="formalidades"> <h2>formalidades</h2>
       <p>ao enviar o email, vai ser verificada a viabilidade de vender seus produtos na farofa. então, tudo será formalizado através de contrato e emitimos os boletos de pagamento da sua assinatura.</p>
     </section>
 
@@ -106,8 +93,7 @@
       <ul>
         <li><strong>autoral:</strong> a arte deve ser de própria autoria do artista.</li>
         <li><strong>acessível:</strong> a arte deve ser apropriada a todos os públicos.</li>
-        <li><strong>diversa:</strong> a arte e artista devem respeitar os direitos humanos.</li>
-      </ul>
+        <li><strong>respeito:</strong> a arte e artista devem respeitar os direitos humanos. </li> </ul>
     </section>
 
     <section id="planos">
@@ -119,18 +105,15 @@
       </ul>
     </section>
 
-    <section>
-      <h2>e se precisar de mais espaço?</h2>
+    <section id="mais-espaco"> <h2>e se precisar de mais espaço?</h2>
       <p>se você precisar de mais espaço de armazenamento para comportar todos os seus produtos, além do que oferecemos, iremos adicionar 30r$ na mensalidade a cada 50 litros adicionais.</p>
     </section>
 
-    <section>
-      <h2>condições de pagamento</h2>
+    <section id="condicoes-pagamento"> <h2>condições de pagamento</h2>
       <p>o pagamento é via boleto com a data de vencimento definida por você. o número de parcelas é definido no momento do contrato e então já emitimos todos os boletos.</p>
     </section>
 
-    <section>
-      <h2>para onde vai esse dinheiro?</h2>
+    <section id="dinheiro-alocacao"> <h2>para onde vai esse dinheiro?</h2>
       <p>tudo é feito para ser o mais acessível possível enquanto pagamos nossa equipe de forma digna.</p>
       <ul>
         <li>folha de pagamento — 50%</li>
@@ -140,8 +123,7 @@
       </ul>
     </section>
 
-    <section>
-      <h2>lançamento da loja</h2>
+    <section id="lancamento"> <h2>lançamento da loja</h2>
       <p>a loja vai entrar no ar para venda de produtos no dia <strong>01/08/2025</strong>. artistas que fecharem com a gente antes desta data ganham <strong>um mês extra</strong> em sua assinatura.</p>
     </section>
 
